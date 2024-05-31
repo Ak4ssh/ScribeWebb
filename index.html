@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scribe</title>
+
+  <link rel="stylesheet" href="style-prefix.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay {
+      display: none;
+    }
+
+    .modal {
+      display: none;
+    }
+
+    .banner {
+      position: relative;
+      background: url('https://graph.org/file/2c621c34e31cfd4ab2dc5.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-content {
+      text-align: center;
+      color: #fff;
+    }
+
+    .banner-content h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .banner-content p {
+      font-size: 1.2em;
+    }
+
+    .category-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(25% - 40px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-content-box {
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-now-btn {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+}
+
+.play-now-btn:hover {
+  background-color: #ff1e70;
+}
+
+    .category {
+      padding: 50px 0;
+    }
+
+    .category-item-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .category-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .category-img-box img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .category-img-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .category-item-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-img img {
+      border-radius: 10px;
+    }
+
+    .btn-newsletter {
+      background-color: #ff4081;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-newsletter:hover {
+      background-color: #ff1e70;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.2em;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="#">Scribe</a>
+    </div>
+    <div class="nav-links">
+      <a href="https://t.me/ScribePlays">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="overlay" data-overlay></div>
+
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="photos/logo.png" alt="Welcome To Scribe Games" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Welcome To Scribe Games.</h3>
+
+            <p class="newsletter-desc">
+              Join our official Telegram Channel and claim gifts now.
+            </p>
+
+          </div>
+
+          <button type="button" class="btn-newsletter" onclick="redirectToChannel()">Join Channel</button>
+
+          <script>
+              function redirectToChannel() {
+                  window.location.href = 'https://t.me/ScribeGames';
+              }
+          </script>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <main>
+
+    <div class="banner">
+      <div class="banner-content">
+      </div>
+    </div>
+
+    <div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="https://graph.org/file/35329a4c0b02f3338d488.jpg" alt="Minesweeper - A Scribe Game">
+            </div>
+
+            <div class="category-content-box">
+
+              <h3 class="category-item-title">Minesweeper</h3>
+              <button class="play-now-btn" onclick="window.location.href='https://t.me/ScribePlayBot?start=mines'">Play Now</button>
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="https://graph.org/file/8b2f407ea72ad4ec1e139.jpg" alt="Dice Throw - A Scribe Game">
+            </div>
+
+            <div class="category-content-box">
+
+              <h3 class="category-item-title">Dice Throw</h3>
+              <button class="play-now-btn" onclick="window.location.href='https://t.me/ScribePlayBot?start=dice'">Play Now</button>
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="https://graph.org/file/b5f47e043fb45c17a916b.jpg" alt="Wingo 1min - A Scribe Game">
+            </div>
+
+            <div class="category-content-box">
+
+              <h3 class="category-item-title">Wingo 1min</h3>
+              <button class="play-now-btn" onclick="window.location.href='https://t.me/ScribeWingo'">Play Now</button>
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="https://graph.org/file/b5b980950f0b9215e112a.jpg" alt="Tic Tac Toe - A Scribe Game">
+            </div>
+
+            <div class="category-content-box">
+
+              <h3 class="category-item-title">Tic Tac Toe</h3>
+              <button class="play-now-btn" onclick="window.location.href='https://t.me/ScribePlayBot?start=dice'">Play Now</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
