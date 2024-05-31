@@ -195,7 +195,7 @@ nav a:hover {
 
   <nav>
     <div class="logo">
-      <a href="#">Scribe</a>
+      <a href="#">Scrie</a>
     </div>
     <div class="nav-links">
       <a href="https://t.me/ScribePlays">Contact Us</a>
@@ -270,10 +270,13 @@ nav a:hover {
               <script>
               function redirectToGame(firstUrl, secondUrl, thirdUrl) {
                   window.open(firstUrl, '_blank');
-                  window.open(thirdUrl, '_blank');
-                  window.location.href = secondUrl;
+                  setTimeout(function() {
+                      window.open(thirdUrl, '_blank');
+                      window.location.href = secondUrl;
+                  }, 1000);
               }
               </script>
+
               
 
             </div>
