@@ -265,12 +265,11 @@ nav a:hover {
             <div class="category-content-box">
 
               <h3 class="category-item-title">Minesweeper</h3>
-              <button class="play-now-btn" onclick="webviewClose(); window.location.href='https://t.me/ScribePlayBot?start=mines';">Play Now</button>
+              <button class="play-now-btn" onclick="clWebview(); window.location.href='https://t.me/ScribePlayBot?start=mines';">Play Now</button>
               <script>
-              Telegram.WebApp.MainButton
-                      .setText('CLOSE WEBVIEW')
-                      .show()
-                      .onClick(function(){ webviewClose(); });
+              function clWebview() {
+              window.Telegram.WebApp.close();
+              }
               </script>
             </div>
 
