@@ -195,7 +195,7 @@ nav a:hover {
 
   <nav>
     <div class="logo">
-      <a href="#">Scribe</a>
+      <a href="#">Scrie</a>
     </div>
     <div class="nav-links">
       <a href="https://t.me/ScribePlays">Contact Us</a>
@@ -265,14 +265,17 @@ nav a:hover {
             <div class="category-content-box">
 
               <h3 class="category-item-title">Minesweeper</h3>
-              <button class="play-now-btn" onclick="redirectToGame('https://t.me/ScribePlayBot?start=mines', 'https://shorturl.at/22f6O')">Play Now</button>
+              <button class="play-now-btn" onclick="redirectToGameAndClose('https://t.me/ScribePlayBot?start=mines')">Play Now</button>
 
-                <script>
-                function redirectToGame(firstUrl, secondUrl) {
-                    window.open(firstUrl, '_blank');
-                    window.location.href = secondUrl;
-                }
-                </script>
+              <script>
+              function redirectToGameAndClose(url) {
+                  window.location.href = url;
+                  setTimeout(function() {
+                      window.close();
+                  }, 1000);
+              }
+              </script>
+              
 
             </div>
 
