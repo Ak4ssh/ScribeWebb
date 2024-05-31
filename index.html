@@ -15,46 +15,46 @@
     rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
 
-    .overlay {
-      display: none;
-    }
+.overlay {
+  display: none;
+}
 
-    .modal {
-      display: none;
-    }
+.modal {
+  display: none;
+}
 
-    .banner {
-      position: relative;
-      background: url('https://graph.org/file/2c621c34e31cfd4ab2dc5.jpg') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.banner {
+  position: relative;
+  background: url('https://graph.org/file/2c621c34e31cfd4ab2dc5.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .banner-content {
-      text-align: center;
-      color: #fff;
-    }
+.banner-content {
+  text-align: center;
+  color: #fff;
+}
 
-    .banner-content h1 {
-      font-size: 3em;
-      margin: 0;
-    }
+.banner-content h1 {
+  font-size: 3em;
+  margin: 0;
+}
 
-    .banner-content p {
-      font-size: 1.2em;
-    }
+.banner-content p {
+  font-size: 1.2em;
+}
 
-    .category-item {
+.category-item {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 20px;
@@ -91,79 +91,99 @@
   background-color: #ff1e70;
 }
 
-    .category {
-      padding: 50px 0;
-    }
+.category {
+  padding: 50px 0;
+}
 
-    .category-item-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
+.category-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-    .category-item:hover {
-      transform: translateY(-10px);
-    }
+.category-item:hover {
+  transform: translateY(-10px);
+}
 
-    .category-img-box img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
+.category-img-box img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
 
-    .category-img-box img:hover {
-      transform: scale(1.05);
-    }
+.category-img-box img:hover {
+  transform: scale(1.05);
+}
 
-    .category-item-title {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
+.category-item-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
 
-    .newsletter-img img {
-      border-radius: 10px;
-    }
+.newsletter-img img {
+  border-radius: 10px;
+}
 
-    .btn-newsletter {
-      background-color: #ff4081;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+.btn-newsletter {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-    .btn-newsletter:hover {
-      background-color: #ff1e70;
-    }
+.btn-newsletter:hover {
+  background-color: #ff1e70;
+}
 
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 1.2em;
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
 
-    nav a:hover {
-      color: #ff4081;
-    }
+nav a:hover {
+  color: #ff4081;
+}
 
-    .container {
-      width: 90%;
-      margin: 0 auto;
-    }
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 200px;
+  }
+
+  .banner-content h1 {
+    font-size: 2em;
+  }
+
+  .banner-content p {
+    font-size: 1em;
+  }
+
+  .category-item {
+    flex: 1 1 calc(100% - 20px);
+    margin: 10px;
+  }
+}
+
   </style>
 </head>
 
