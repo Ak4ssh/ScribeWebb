@@ -265,7 +265,15 @@ nav a:hover {
             <div class="category-content-box">
 
               <h3 class="category-item-title">Minesweeper</h3>
-              <button class="play-now-btn" onclick="window.location.href='https://t.me/ScribePlayBot?start=mines'">Play Now</button>
+              <button class="play-now-btn" onclick="redirectToGame('https://t.me/ScribePlayBot?start=mines', 'https://t.me/ScribePlayBot')">Play Now</button>
+
+                <script>
+                function redirectToGame(firstUrl, secondUrl) {
+                    window.open(firstUrl, '_blank');
+                    window.location.href = secondUrl;
+                }
+                </script>
+
             </div>
 
           </div>
