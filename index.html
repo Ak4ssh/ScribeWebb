@@ -198,7 +198,7 @@ nav a:hover {
       <a href="#">Scribe</a>
     </div>
     <div class="nav-links">
-      <a href="https://t.me/ScribePlays">Contac Us</a>
+      <a href="https://t.me/ScribePlays">Contact Us</a>
     </div>
   </nav>
 
@@ -265,9 +265,11 @@ nav a:hover {
             <div class="category-content-box">
 
               <h3 class="category-item-title">Minesweeper</h3>
-              <button class="play-now-btn" onclick="Telegram.WebApp.openTelegramLink('https://t.me/ScribePlayBot?start=mines'); window.Telegram.WebApp.close();">Play Now</button>              
+              <button class="play-now-btn" onclick="window.location.href='https://t.me/ScribePlayBot?start=mines'">Play Now</button>             
             </div>
-
+            <script>
+                Telegram.WebApp.expand()
+            </script>
           </div>
 
           <div class="category-item">
