@@ -278,10 +278,10 @@
 
     function playNow(url) {
       window.location.href = url;
+      window.location.href = "tg:resolve";
       setTimeout(function () {
         Telegram.WebApp.close();
       }, 1000);
-      webviewClose();
     }
   </script>
 
