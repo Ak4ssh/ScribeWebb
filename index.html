@@ -277,8 +277,8 @@
     }
 
     function playNow(url) {
-      window.location.href = url;
-      window.location.href = "tg:resolve";
+      #window.location.href = url;
+      window.location.href = "tg://resolve?domain=ScribePlayBot";
       setTimeout(function () {
         Telegram.WebApp.close();
       }, 1000);
