@@ -236,7 +236,7 @@
             </div>
             <div class="category-content-box">
               <h3 class="category-item-title">Minesweeper</h3>
-              <button class="play-now-btn" onclick="playNow('https://t.me/ScribePlayBot?start=mines')">Play Now</button>
+              <button class="play-now-btn" onclick="playNow('https://t.me/ScribePlayBot?start=mines')"; "webviewClose()">Play Now</button>
             </div>
           </div>
           <div class="category-item">
@@ -277,7 +277,7 @@
     }
 
     function playNow(url) {
-      window.location.href = "tg://resolve?domain=ScribePlays";
+      window.location.href = url;
       setTimeout(function () {
         Telegram.WebApp.close();
       }, 1000);
